@@ -1,0 +1,29 @@
+@import 'vars';
+
+.iteration-0 {
+    .first-contact {
+        height: 68rem;
+        background-color: darken($synapse-blue, 25%);
+    }
+
+    .message {
+        position: relative;
+        height: 36rem;
+        margin: -18rem 0;
+        background-color: white;
+    }
+
+    .message-headline {
+        position: absolute;
+        bottom: 100%;
+        width: 68rem;
+        height: 8rem;
+        margin-bottom: 4rem;
+        background-color: $synapse-blue;
+    }
+
+    .our-service {
+        height: 68rem;
+        background-color: $sokanu-red;
+    }
+}

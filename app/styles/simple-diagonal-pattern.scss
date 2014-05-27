@@ -1,0 +1,47 @@
+@import 'vars';
+
+.iteration-1 {
+    .first-contact {
+        height: 120rem;
+        background-color: darken($synapse-blue, 25%);
+    }
+
+    .our-service {
+        position: relative;
+        height: 120rem;
+        margin-top: -90rem;
+        overflow: hidden;
+    }
+        .our-service:after {
+            content: '';
+
+            position: absolute;
+            top: 0; left: 0;
+
+            display: block;
+            width: 200%; height: 100%;
+
+            background-color: $sokanu-red;
+            transform-origin: top left;
+            transform: rotate(32deg);
+        }
+
+
+
+
+    .message {
+        position: relative;
+        height: 36rem;
+        margin: -18rem 0;
+        background-color: white;
+    }
+
+    .message-headline {
+        position: absolute;
+        bottom: 100%;
+        width: 68rem;
+        height: 8rem;
+        margin-bottom: 4rem;
+        background-color: $synapse-blue;
+    }
+}
