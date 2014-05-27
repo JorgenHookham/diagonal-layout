@@ -25,23 +25,4 @@
             transform-origin: top left;
             transform: rotate(32deg);
         }
-
-
-
-
-    .message {
-        position: relative;
-        height: 36rem;
-        margin: -18rem 0;
-        background-color: white;
-    }
-
-    .message-headline {
-        position: absolute;
-        bottom: 100%;
-        width: 68rem;
-        height: 8rem;
-        margin-bottom: 4rem;
-        background-color: $synapse-blue;
-    }
 }

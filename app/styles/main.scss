@@ -13,3 +13,54 @@
 }
 
 body { margin: 0; }
+
+.project-overview {
+    padding: 1em 0;
+}
+
+.iteration-2 {
+    .first-contact {
+        height: 120rem;
+        background-color: darken($synapse-blue, 25%);
+    }
+
+    .diagonal {
+        position: relative;
+        z-index: 1;
+        height: 120rem;
+        margin: -90rem 0;
+        overflow: hidden;
+    }
+        .diagonal:after {
+            content: '';
+
+            position: absolute;
+            top: 0; left: 0;
+
+            display: block;
+            width: 160%; height: 48rem;
+
+            background-color: white;
+            transform-origin: top left;
+            transform: rotate(24deg);
+        }
+
+    .our-service {
+        position: relative;
+        height: 120rem;
+        overflow: hidden;
+    }
+        .our-service:after {
+            content: '';
+
+            position: absolute;
+            top: 0; left: 0;
+
+            display: block;
+            width: 200%; height: 100%;
+
+            background-color: $sokanu-red;
+            transform-origin: top left;
+            transform: rotate(24deg);
+        }
+}
