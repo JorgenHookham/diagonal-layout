@@ -8,7 +8,8 @@ angular.module('diagonalLayoutAngularApp')
     var iterations = [
       'simple-layout',
       'simple-diagonal-pattern',
-      'iteration-2'
+      'striped-diagonal-pattern',
+      'advanced-diagonal-pattern'
     ];
 
     // Public API here

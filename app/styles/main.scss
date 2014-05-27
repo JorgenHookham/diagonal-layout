@@ -64,3 +64,59 @@ body { margin: 0; }
             transform: rotate(24deg);
         }
 }
+
+.iteration-3 {
+    .first-contact {
+        height: 120rem;
+        background-color: darken($synapse-blue, 25%);
+    }
+
+    .diagonal {
+        position: relative;
+        z-index: 1;
+        height: 120rem;
+        margin: -90rem 0 -0;
+        overflow: hidden;
+    }
+        .diagonal:after {
+            content: '';
+
+            position: absolute;
+            bottom: 0; right: 0;
+
+            display: block;
+            width: 160%; height: 48rem;
+
+            background-color: white;
+            transform: rotate(24deg);
+            transform-origin: bottom right;
+        }
+        .diagonal:nth-of-type(odd) {
+            margin: 0 0 -185rem;
+        }
+        .diagonal:nth-of-type(odd):after {
+            top: 0; bottom: auto;
+            transform: rotate(-24deg);
+            transform-origin: top right;
+        }
+
+    .our-service {
+        position: relative;
+        height: 120rem;
+        overflow: hidden;
+    }
+        .our-service:after {
+            content: '';
+
+            position: absolute;
+            top: 24rem; right: -24rem;
+
+            display: block;
+            width: 200%; height: 200%;
+
+            background-color: $sokanu-red;
+
+            transform-origin: top right;
+            transform: rotate(24deg);
+        }
+}
