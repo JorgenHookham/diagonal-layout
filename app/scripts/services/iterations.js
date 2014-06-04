@@ -10,7 +10,9 @@ angular.module('diagonalLayoutAngularApp')
       'simple-diagonal-pattern',
       'striped-diagonal-pattern',
       'advanced-diagonal-pattern',
-      'diagonal-layout'
+      'diagonal-layout',
+      'verne',
+      'nautilus'
     ];
 
     // Public API here
