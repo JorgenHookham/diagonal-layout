@@ -1,0 +1,62 @@
+@import 'round-one-v1';
+
+.photo-btn {
+    border-radius: 2em;
+}
+
+.btn-primary {
+    background-color: $sokanu-red;
+    border: none;
+    border-radius: 2em;
+
+    &:hover {
+        background-color: darken($sokanu-red, 4%);
+    }
+}
+
+.btn-email,
+.btn-facebook {
+    padding-left: 3em;
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+}
+
+.btn-email, .btn-email:active { background-image: url(../../images/email.svg); }
+.btn-facebook, .btn-facebook:active { background-image: url(../../images/facebook.svg); }
+
+.service-explanation .headline {
+    background-color: rgba($sokanu-red, .95);
+    font-size: 3.5em;
+}
+
+.user-perspectives {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+}
+    .user-perspectives .photo {
+        display: block;
+        width: 160px; height: 160px;
+        float: right;
+        border-radius: 50%;
+    }
+
+.conversion > .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.distinguishing {
+    .fun { @include highlight-group($sokanu-red); }
+    .internet { @include highlight-group($sokanu-red); }
+    .science { @include highlight-group($sokanu-red); }
+}
+
+
+
+
+
+
+

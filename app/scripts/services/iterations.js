@@ -12,7 +12,9 @@ angular.module('diagonalLayoutAngularApp')
       'advanced-diagonal-pattern',
       'diagonal-layout',
       'verne',
-      'nautilus'
+      'nautilus',
+      'round-one-v1',
+      'round-one-v2'
     ];
 
     // Public API here
