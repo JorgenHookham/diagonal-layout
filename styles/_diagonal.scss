@@ -1,0 +1,30 @@
+@mixin diagonal ($height: 32rem, $angle: 12deg, $bg-color: white) {
+    height: $height;
+    margin: -$height/2 0;
+
+    transform: rotate($angle);
+    transform-origin: top center;
+
+    background-color: $bg-color;
+    box-shadow: -24em 0 0 $bg-color, 24em 0 0 $bg-color;
+
+    .upright {
+        transform: rotate(-$angle);
+        transform-origin: top center;
+    }
+
+    & + * {
+        padding-top: $height/2;
+    }
+}
+
+.diagonal {
+    @include diagonal($angle: 12deg);
+    @media (min-width: 1500px) {
+        @include diagonal($angle: 8deg);
+    }
+}
+
+.overflow-limiter {
+    overflow-x: hidden;
+}

@@ -1,0 +1,333 @@
+@import 'vars';
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body { margin: 0; }
+
+.project-overview {
+    padding: 1em 0;
+}
+
+.iteration-2 {
+    .first-contact {
+        height: 120rem;
+        background-color: darken($synapse-blue, 25%);
+    }
+
+    .diagonal {
+        position: relative;
+        z-index: 1;
+        height: 120rem;
+        margin: -90rem 0;
+        overflow: hidden;
+    }
+        .diagonal:after {
+            content: '';
+
+            position: absolute;
+            top: 0; left: 0;
+
+            display: block;
+            width: 160%; height: 48rem;
+
+            background-color: white;
+            transform-origin: top left;
+            transform: rotate(24deg);
+        }
+
+    .our-service {
+        position: relative;
+        height: 120rem;
+        overflow: hidden;
+    }
+        .our-service:after {
+            content: '';
+
+            position: absolute;
+            top: 0; left: 0;
+
+            display: block;
+            width: 200%; height: 100%;
+
+            background-color: $sokanu-red;
+            transform-origin: top left;
+            transform: rotate(24deg);
+        }
+}
+
+.iteration-3 {
+    .first-contact {
+        height: 120rem;
+        background-color: darken($synapse-blue, 25%);
+    }
+
+    .diagonal {
+        position: relative;
+        z-index: 1;
+        height: 120rem;
+        margin: -90rem 0 -0;
+        overflow: hidden;
+    }
+        .diagonal:after {
+            content: '';
+
+            position: absolute;
+            bottom: 0; right: 0;
+
+            display: block;
+            width: 160%; height: 48rem;
+
+            background-color: white;
+            transform: rotate(24deg);
+            transform-origin: bottom right;
+        }
+        .diagonal:nth-of-type(odd) {
+            margin: 0 0 -185rem;
+        }
+        .diagonal:nth-of-type(odd):after {
+            top: 0; bottom: auto;
+            transform: rotate(-24deg);
+            transform-origin: top right;
+        }
+
+    .our-service {
+        position: relative;
+        height: 120rem;
+        overflow: hidden;
+    }
+        .our-service:after {
+            content: '';
+
+            position: absolute;
+            top: 24rem; right: -24rem;
+
+            display: block;
+            width: 200%; height: 200%;
+
+            background-color: $sokanu-red;
+
+            transform-origin: top right;
+            transform: rotate(24deg);
+        }
+}
+
+.iteration-4 {
+    .first-contact {
+        height: 120rem;
+        background-image: url(../images/hero.jpg);
+        background-size: cover;
+    }
+
+    .little-red-stripe {
+        height: .68em;
+        background-color: $sokanu-red;
+    }
+
+    .access {
+        @include clearfix();
+        padding-top: 2rem;
+        margin-bottom: 4.25rem;
+
+        > a { float: right; }
+    }
+        .access-btn { @extend .photo-btn; }
+
+    .brand {
+        color: white;
+        text-align: center
+    }
+        .brand-name {
+            margin: 0 0 1.5rem;
+
+            font-family: 'hypatia sans pro';
+            font-size: 4.25em;
+            font-weight: 600;
+        }
+        .brand-promise {
+            width: 20em;
+            margin: 0 auto;
+
+            font-family: 'kepler std';
+            font-size: 2em;
+            font-weight: 100;
+        }
+
+    .message {
+        @include clearfix();
+        position: relative;
+        z-index: 2;
+        > .container > * { clear: left; }
+    }
+        .message-headline {
+            margin-top: 24rem;
+            margin-left: -.32em;
+            margin-bottom: 1em;
+            padding: .68em .32em;
+            float: left;
+            background-color: rgba($synapse-blue, .95);
+            color: rgba(white, .95);
+            font-family: 'proxima nova';
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .message-copy {
+            width: 36rem;
+            font-size: 1.25em;
+        }
+        .message-supporting-headline {
+            max-width: 48rem;
+            margin-left: -.68rem;
+            margin-bottom: 2rem;
+            padding: .32em .68em;
+            float: left;
+            background-color: rgba($synapse-blue, .95);
+            color: rgba(white, .95);
+            font-family: 'proxima nova';
+            font-weight: bold;
+        }
+        .message-supporting-points {
+
+            @include clearfix;
+            clear: left;
+
+            > dt {
+                display:inline-block;
+                padding: 0 .625rem 0;
+                margin-bottom: .5rem;
+
+                font-family: 'proxima nova';
+                font-size: 2em;
+                font-weight: bold;
+                color: rgba(white, .9);
+
+                &:nth-of-type(1) { background-color: $sokanu-red; margin-left: 24rem; }
+                &:nth-of-type(2) { background-color: $synapse-blue; margin-left: 48rem; }
+                &:nth-of-type(3) { background-color: $solar-yellow; margin-left: 72rem; }
+            }
+            > dd {
+
+                max-width: 32rem;
+                margin-bottom: 2rem;
+
+                &:nth-of-type(1) { margin-left: 24rem; }
+                &:nth-of-type(2) { margin-left: 48rem; }
+                &:nth-of-type(3) { margin-left: 72rem; }
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 6rem; height: 6rem;
+                    margin-right: 1rem;
+                    float: left;
+                    background-color: hsl(0, 0, 80);
+                }
+
+                &:nth-of-type(1):before { background-color: $sokanu-red; }
+                &:nth-of-type(2):before { background-color: $synapse-blue; }
+                &:nth-of-type(3):before { background-color: $solar-yellow; }
+            }
+        }
+
+    .diagonal {
+        position: relative;
+        z-index: 1;
+        height: 120rem;
+        margin: -90rem 0 -0;
+        overflow: hidden;
+    }
+        .diagonal > .container { position: relative; z-index: 2; }
+        .diagonal:after {
+            content: '';
+
+            position: absolute;
+            bottom: 0; right: 0;
+
+            display: block;
+            width: 160%; height: 48rem;
+
+            background-color: white;
+            transform: rotate(24deg);
+            transform-origin: bottom right;
+        }
+        .diagonal:nth-of-type(odd) {
+            margin: 0 0 -185rem;
+        }
+        .diagonal:nth-of-type(odd):after {
+            top: 0; bottom: auto;
+            transform: rotate(-24deg);
+            transform-origin: top right;
+        }
+
+    .our-service {
+        position: relative;
+        box-sizing: border-box;
+        height: 120rem;
+        padding-top: 40rem;
+        overflow: hidden;
+    }
+        .our-service > .container { position: relative; z-index: 2; }
+        .our-service:after {
+            content: '';
+
+            position: absolute;
+            top: 24rem; right: -24rem;
+
+            display: block;
+            width: 200%; height: 200%;
+
+            background-image: url(../images/pattern.svg);
+
+            transform-origin: top right;
+            transform: rotate(24deg);
+        }
+        .stage {
+            position: relative;
+            width: 40rem;
+        }
+            .stage:nth-of-type(even) {
+                margin: -4rem 0 -2rem 44rem;
+            }
+            .stage-headline {
+                color: rgba(#333, .9);
+                font-family: 'proxima nova';
+                font-weight: bold;
+            }
+            .stage-description {
+                color: #7A2E2E;
+                font-family: 'helvetica neue';
+                font-size: 1.25em;
+            }
+}
+
+.photo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+
+    border: 2px solid rgba(white, .9);
+    border-radius: .25em;
+
+    color: white;
+    font-family: 'proxima nova';
+
+    transition: all 500ms;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, .12);
+        box-shadow: 0 0 .5em rgba(white, 0.32), 0 0 .25em rgba(0, 0, 0, 0.32) inset;
+
+        color: white !important;
+        text-decoration: underline;
+        text-shadow: 0 0 4px rgba(white, 0.32);
+    }
+}
